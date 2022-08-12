@@ -2,6 +2,12 @@
 
 function topThreeWords(text) {
     let regex = ".*[a-zA-Z].*";
+    
+    // Create a conditional Statement to record each word,
+    // Use a forEach function to save each word,
+    // Making sure it is not case senseitive,
+    // counting a word out of time.
+
     if(text.match(regex)) {
         let wordMap = new Map();
         text.split(' ').forEach(word => {
@@ -16,7 +22,14 @@ function topThreeWords(text) {
                 }
             }
         })
+        
+        // Creating a const to sort the words in an entry,
+        // used to count the words individually.
+
         const sortedWordMap = new Map([...wordMap.entries()].sort((a, b) => b[1] - a[1]));
+
+        // Create a conditional statement using special characters,
+        // Respond to special characters and non special characters.
 
         let result = Array.from(sortedWordMap.keys()).filter( (word, index) => index < 3);
         result = result.map(response => {
