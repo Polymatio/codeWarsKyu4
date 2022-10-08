@@ -1,4 +1,6 @@
-//Create a function to extract the range
+// Create a function to extract the range
+// Assign size to use length method to return a number of arrays and assign box into an empty an array
+// 
 
 function solution(list) {
     let size = list.length;
