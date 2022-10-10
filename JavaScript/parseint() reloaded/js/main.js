@@ -1,6 +1,15 @@
-//Create a function that converts a string into an integer.
+// Create a function that converts a string into an integer
+// Assigning numberMap to convert the strings into integers into the array
+// Making a function of basicNumbers to return basic numbers
+// Will use ternary operator to add quick conditional statement
+// Using the split, map, and reduce method to list the numbers and add it into a number
+// Making another function for combinationNumbers to return complex numbers
+// Assigning req to 0 as a base number and assigning numbers to numbers.filter to filter x not to use 'and' when combining numbers
+// Added a conditional if statement for more then one string of numbers with 'hundred', 'thousand', and 'million' using the include method to determine if it is true or false in the array
+// Also add conditionals for numbers around 'hundred', and 'thousand' individually otherwise return the req or basic numbers and return req combined numbers
+// Making a function to convert strings into integers using the split method to divide the strings and return number.length one a single integer
+// Will use ternary operator to add another quick statement to return basicNumbers and combinationNumbers
 
-//Created a map to convert the strings into integers on an array.
 const numberMap = {
     'zero' : 0,
     'one' : 1,
@@ -35,16 +44,12 @@ const numberMap = {
     'million' : 1000000
 }
 
-//Create a way to get basic numbers from a string.
 function basicNumbers(number) {
     return numberMap[number]
-    
-    //Used a ternary operator to add a quick conditional statement.
-            ? numberMap[number]
-            : number.split('-').map(x => numberMap[x]).reduce((before, after) => before + after, 0);
+        ? numberMap[number]
+        : number.split('-').map(x => numberMap[x]).reduce((before, after) => before + after, 0);
 }
 
-//Create a way to get numbers that involves combining strings into integers.
 function combinationNumbers(numbers) {
     let req = 0;
     numbers = numbers.filter(x => x !== 'and');
