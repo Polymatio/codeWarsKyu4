@@ -1,4 +1,15 @@
-// Create a function to convert Roman Letters to Numerical Numbers and in vice versa.
+// Create a function to convert Roman Letters to Numerical Numbers and in vice versa
+// Assigning RomanNumerals to an expression function for fromRoman
+// Assigning map to define roman numerals to numeric numbers
+// Assigning value to 0
+// Conditional for loop if convert numbers into roman numerals and if statement false to return as null
+// Return will be a number value
+// Created another function expression for toRoman
+// Assigning another map for toRoman function using roman numerals and numeric numbers
+// Assigning roman to '' to return the roman numerals as a string
+// Creating a while statement for value greater then 0 to assign a roman numeral
+// Using r in map to represent the roman numeral in the array in the for loop
+// Return will be a roman numeral
 
 let RomanNumerals = {
     fromRoman: function(roman) {
